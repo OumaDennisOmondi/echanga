@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">  
   <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">  
   <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">  
@@ -378,10 +378,32 @@
       <!-- end link -->
 
       <!-- link -->
-      <a href="#" class="mb-4 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+      <a id="withdraw-parent" class="cursor-pointer mb-4 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
         <i class="fas fa-cash-register text-xs mr-2"></i>
-        Withdrawal Requests
+        Withdrawals<i class="fad fa-chevron-down ml-2 text-xs leading-none"></i>  
       </a>
+      <div class="mt-3 hidden" id="withdraw-children">
+      <ul class="flex flex-col px-10 -m-5">
+        <li class="mb-3">
+          <a href="./contributions.html" class="mb-4 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="fas fa-money-bill-alt text-xs mr-2"></i>
+            New Request
+          </a>
+        </li>
+        <li class="mb-3">
+          <a href="./withdrawal-status.html" class="mb-4 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="far fa-clock text-xs mr-2"></i>
+            Statuses
+          </a>
+        </li>
+        <li class="mb-3">
+          <a href="./withdrawal-preferences.html" class="mb-4 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="fas fa-tools text-xs mr-2"></i>
+            Preferences
+          </a>
+        </li>
+      </ul>
+    </div>
       <!-- end link -->
  
 
@@ -479,6 +501,17 @@ $("button").click(function(){
     $("p").slideToggle();
   });
     });
+</script>
+<script>
+  //CKEDITOR.replace( 'description' );
+  $(document).ready(function () {
+  $("#withdraw-parent").click(function(e){
+    e.preventDefault()
+      $("#withdraw-children").toggle(400,function(){
+
+      });
+    });
+  });
 </script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
 <script src="assets/js/scripts.js"></script>

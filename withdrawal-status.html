@@ -7,8 +7,11 @@
   <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">  
   <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">  
-  
+  <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+ <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
   <title>eChanga</title>
 </head>
 <body class="bg-gray-100">
@@ -390,7 +393,7 @@
           </a>
         </li>
         <li class="mb-3">
-          <a href="./withdrawal-status.html" class="mb-4 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+          <a href="./contributions.html" class="mb-4 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
             <i class="far fa-clock text-xs mr-2"></i>
             Statuses
           </a>
@@ -414,256 +417,75 @@
 
   <!-- strat content -->
   <div class="bg-gray-100 flex-1 p-6 md:mt-16"> 
-
-    
-    <!-- General Report -->
-    <div class="grid grid-cols-4 gap-6 xl:grid-cols-1">
-
-
-    <!-- card -->
-    <div class="report-card">
-        <div class="card">
-            <div class="card-body flex flex-col">
-                
-                <!-- top -->
-                <div class="flex flex-row justify-between items-center">
-                    <div class="h6 text-indigo-700 fas fa-hand-holding-usd"></div>
-                    <span class="rounded-full text-white badge bg-teal-400 text-xs">
-                        .
-                        <i class="fal fa-chevron-up ml-1"></i>
-                    </span>
-                </div>
-                <!-- end top -->
-
-                <!-- bottom -->
-                <div class="mt-8">
-                    <h1 class="h5 num-4">5</h1>
-                    <p>Total Campaigns</p>
-                </div>                
-                <!-- end bottom -->
-    
-            </div>
-        </div>
-        <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
-    </div>
-    <!-- end card -->
-
-
-    <!-- card -->
-    <div class="report-card">
-        <div class="card">
-            <div class="card-body flex flex-col">
-                
-                <!-- top -->
-                <div class="flex flex-row justify-between items-center">
-                    <div class="h6 text-red-700 far fa-hourglass"></div>
-                    <span class="rounded-full text-white badge bg-red-400 text-xs">
-                        6%
-                        <i class="fal fa-chevron-down ml-1"></i>
-                    </span>
-                </div>
-                <!-- end top -->
-
-                <!-- bottom -->
-                <div class="mt-8">
-                    <h5 class="h5 num-4">2</h5>
-                    <p>Active Campaigns</p>
-                </div>                
-                <!-- end bottom -->
-    
-            </div>
-        </div>
-        <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
-    </div>
-    <!-- end card -->
-
-
-    <!-- card -->
-    <div class="report-card">
-        <div class="card">
-            <div class="card-body flex flex-col">
-                
-                <!-- top -->
-                <div class="flex flex-row justify-between items-center">
-                    <div class="h6 text-yellow-600 fas fa-money-bill-alt"></div>
-                    <span class="rounded-full text-white badge bg-teal-400 text-xs">
-                        72%
-                        <i class="fal fa-chevron-up ml-1"></i>
-                    </span>
-                </div>
-                <!-- end top -->
-
-                <!-- bottom -->
-                <div class="mt-8">
-                    <h1 class="h5 num-4"> KES 12M</h1>
-                    <p>total Funds</p>
-                </div>                
-                <!-- end bottom -->
-    
-            </div>
-        </div>
-        <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
-    </div>
-    <!-- end card -->
-<!-- card -->
-<div class="report-card">
-    <div class="card">
-        <div class="card-body flex flex-col">
-            
-            <!-- top -->
-            <div class="flex flex-row justify-between items-center">
-                <div class="h6 text-green-700 fad fa-users"></div>
-                <span class="rounded-full text-white badge bg-teal-400 text-xs">
-                    150%
-                    <i class="fal fa-chevron-up ml-1"></i>
-                </span>
-            </div>
-            <!-- end top -->
-
-            <!-- bottom -->
-            <div class="mt-8">
-                <h1 class="h5 num-4">123</h1>
-                <p>total Contributers</p>
-            </div>                
-            <!-- end bottom -->
-
-        </div>
-    </div>
-    <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
-</div>
-<!-- end card -->
-    
-
-</div>
-
-
-    <!-- start quick Info -->
-    <div class="grid grid-cols-3 gap-6 mt-6 xl:grid-cols-1">
-
-
-    <!-- Browser Stats -->
-    <div class="card">
-        <div class="card-header">Your Top Campaigns</div>
-
-        <!-- brawser -->
-        <div class="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
-            <div class="flex items-center">
-                <span>1. </span>    
-                <h1>Water Relief Fund</h1>
-            </div>                
-            <div>
-                <span class="num-2"></span>12M
-            </div>
-        </div>
-        <!-- end brawser -->
-
-        <!-- brawser -->
-        <div class="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
-            <div class="flex items-center">
-                <span>2. </span>     
-                <h1>Bring Omar Home</h1>
-            </div>                
-            <div>
-                <span class="num-2"></span>10M
-            </div>
-        </div>
-        <!-- end brawser -->
-
-        <!-- brawser -->
-        <div class="p-6 flex flex-row justify-between items-center text-gray-600 border-b">
-            <div class="flex items-center">
-                <span>3. </span>     
-                <h1>Build School Dorm</h1>
-            </div>                
-            <div>
-                <span class="num-2"></span>9M
-            </div>
-        </div>
-        <!-- end brawser -->
-
-        <!-- brawser -->
-        <div class="p-6 flex flex-row justify-between items-center text-gray-600 border-b-0">
-            <div class="flex items-center">
-                <span>4. </span>    
-                <h1>Feeding Programme</h1>
-            </div>                
-            <div>
-                <span class="num-2"></span>6M
-            </div>
-        </div>
-        <!-- end brawser -->
-
-    </div>
-    <!-- end Browser Stats -->
-
-    <!-- Start Recent Sales -->
-    <div class="card col-span-2 xl:col-span-1">
-        <div class="card-header">Recent Contributions</div>
-
-        <table class="table-auto w-full text-left">
+    <h1 class="sm:text-xl text-2xl font-medium title-font mb-4 text-gray-900 ">Withdrawals (statuses)</h1>
+    <hr class="w-10/12"/>
+    <div class="flex border-2 rounded-lg mt-10 border-gray-300 border-opacity-50 p-8 sm:flex-row flex-col w-10/12">
+        <table class="table-auto w-full text-left" id="dataTable">
             <thead>
                 <tr>
                     <th class="px-4 py-2 border-r">#</th>
-                    <th class="px-4 py-2 border-r">contributor</th>
+                    <th class="px-4 py-2 border-r">Campaign Title</th>
                     <th class="px-4 py-2 border-r">campaign code</th>
-                    <th class="px-4 py-2 border-r">price</th>
-                    <th class="px-4 py-2">date</th>
+                    <th class="px-4 py-2 border-r">Amount withdrawn</th>
+                    <th class="px-4 py-2 border-r">Status</th>
+                    <th class="px-4 py-2">Action</th>
                 </tr>
             </thead>
             <tbody class="text-gray-600">
 
                 <tr>                    
                     <td class="border border-l-0 px-4 py-2 text-center text-green-500"><i class="fad fa-circle"></i></td>
-                    <td class="border border-l-0 px-4 py-2">Hillow Adan Omar.</td>
+                    <td class="border border-l-0 px-4 py-2">Water Relief Fund.</td>
                     <td class="border border-l-0 px-4 py-2">CF001</td>
                     <td class="border border-l-0 px-4 py-2">$2000<span class="num-2"></span></td>
-                    <td class="border border-l-0 border-r-0 px-4 py-2"><span class="num-2"></span>5 minutes ago</td>
+                    <td class="border border-l-0 px-4 py-2">Settled<span class="num-2"></span></td>
+                    <td class="border border-l-0 border-r-0 px-4 py-2"><a href="#" class="btn-bs-success">View</a></td>
                 </tr>
                 <tr>                    
                     <td class="border border-l-0 px-4 py-2 text-center text-yellow-500"><i class="fad fa-circle"></i></td>
-                    <td class="border border-l-0 px-4 py-2">Ouma Dennis Omondi.</td>
+                    <td class="border border-l-0 px-4 py-2">Ouma Medical Fund.</td>
                     <td class="border border-l-0 px-4 py-2">CF001</td>
                     <td class="border border-l-0 px-4 py-2">$1500<span class="num-2"></span></td>
-                    <td class="border border-l-0 border-r-0 px-4 py-2"><span class="num-2"></span>49 minutes ago</td>
+                    <td class="border border-l-0 px-4 py-2">Pending<span class="num-2"></span></td>
+                    <td class="border border-l-0 border-r-0 px-4 py-2"><a href="#" class="btn-bs-success">View</a></td>
                 </tr>
                 <tr>                    
                     <td class="border border-l-0 px-4 py-2 text-center text-green-500"><i class="fad fa-circle"></i></td>
-                    <td class="border border-l-0 px-4 py-2">Zackariah Hussein.</td>
+                    <td class="border border-l-0 px-4 py-2">Bring Omar Home.</td>
                     <td class="border border-l-0 px-4 py-2">CF001</td>
                     <td class="border border-l-0 px-4 py-2">$1600<span class="num-2"></span></td>
-                    <td class="border border-l-0 border-r-0 px-4 py-2"><span class="num-2"></span> minutes ago</td>
+                    <td class="border border-l-0 px-4 py-2">Cancelled<span class="num-2"></span></td>
+                    <td class="border border-l-0 border-r-0 px-4 py-2"><a href="#" class="btn-bs-success">View</a></td>
                 </tr>
                 <tr>                    
                     <td class="border border-l-0 px-4 py-2 text-center text-red-500"><i class="fad fa-circle"></i></td>
-                    <td class="border border-l-0 px-4 py-2">Musa Hassan.</td>
+                    <td class="border border-l-0 px-4 py-2">Feeed the Children.</td>
                     <td class="border border-l-0 px-4 py-2">CF001</td>
                     <td class="border border-l-0 px-4 py-2">$1900<span class="num-2"></span></td>
-                    <td class="border border-l-0 border-r-0 px-4 py-2"><span class="num-2"></span> 1 hour ago</td>
+                    <td class="border border-l-0 px-4 py-2">Pending<span class="num-2"></span></td>
+                    <td class="border border-l-0 border-r-0 px-4 py-2"><a href="#" class="btn-bs-success">View</a></td>
                 </tr>
                 <tr>                    
                     <td class="border border-l-0 px-4 py-2 text-center text-yellow-500"><i class="fad fa-circle"></i></td>
-                    <td class="border border-l-0 px-4 py-2">Derick Mulumba.</td>
+                    <td class="border border-l-0 px-4 py-2">Girls Sanitary Fund.</td>
                     <td class="border border-l-0 px-4 py-2">CF001</td>
                     <td class="border border-l-0 px-4 py-2">$5000<span class="num-2"></span></td>
-                    <td class="border border-l-0 border-r-0 px-4 py-2"><span class="num-2"></span> 2 hours ago</td>
+                    <td class="border border-l-0 px-4 py-2">Settled<span class="num-2"></span></td>
+                    <td class="border border-l-0 border-r-0 px-4 py-2"><a href="#" class="btn-bs-success">View</a></td>
                 </tr>
                 <tr>                    
                     <td class="border border-l-0 border-b-0 px-4 py-2 text-center text-green-500"><i class="fad fa-circle"></i></td>
-                    <td class="border border-l-0 border-b-0 px-4 py-2">Halima Rhoba.</td>
+                    <td class="border border-l-0 border-b-0 px-4 py-2">stop FGM Fund.</td>
                     <td class="border border-l-0 px-4 py-2">CF001</td>
-                    <td class="border border-l-0 border-b-0 px-4 py-2">$1200<span class="num-2"></span></td>
-                    <td class="border border-l-0 border-b-0 border-r-0 px-4 py-2"><span class="num-2"></span> 9 hours ago</td>
+                    <td class="border border-l-0 px-4 py-2">$5000<span class="num-2"></span></td>
+                    <td class="border border-l-0 border-b-0 px-4 py-2">Settled<span class="num-2"></span></td>
+                    <td class="border border-l-0 border-b-0 border-r-0 px-4 py-2"><a href="#" class="btn-bs-success">View</a></td>
                 </tr>
                 
             </tbody>
         </table>
     </div>
-    <!-- End Recent Sales -->
-
-
-</div>
-    <!-- end quick Info -->
-        
+    
 
   </div>
   <!-- end content -->
@@ -673,17 +495,18 @@
 
 <!-- script -->
 <script>
-  //CKEDITOR.replace( 'description' );
-  $(document).ready(function () {
-  $("#withdraw-parent").click(function(e){
-    e.preventDefault()
-      $("#withdraw-children").toggle(400,function(){
+    $(document).ready(function () {
+    $('#dataTable').DataTable();
 
+    $("#withdraw-parent").click(function(e){
+      e.preventDefault()
+        $("#withdraw-children").toggle(400,function(){
+
+        });
       });
     });
-  });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
 <script src="assets/js/scripts.js"></script>
 <!-- end script -->
 
